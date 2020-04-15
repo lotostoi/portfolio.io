@@ -12,15 +12,8 @@
 
 <body>
     <section class="waite_load">
-        <div id="cube-loader">
-            <div class="caption">
-                <div class="cube-loader">
-                    <div class="cube loader-1"></div>
-                    <div class="cube loader-2"></div>
-                    <div class="cube loader-4"></div>
-                    <div class="cube loader-3"></div>
-                </div>
-            </div>
+        <div id="preloader">
+            <div id="loader"></div>
         </div>
     </section>
     <main>
@@ -136,6 +129,7 @@
             console.log('eeee')
             setTimeout(() => {
                 document.querySelector('.waite_load').classList.add('waite_load-off')
+                document.querySelector('main').style.display = "flex"
             }, 3000)
         }
     </script>
