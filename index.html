@@ -7,10 +7,22 @@
     <title>Document</title>
     <link href="fontawesome-free-web/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
+
 <body>
+    <section class="waite_load">
+        <div id="cube-loader">
+            <div class="caption">
+                <div class="cube-loader">
+                    <div class="cube loader-1"></div>
+                    <div class="cube loader-2"></div>
+                    <div class="cube loader-4"></div>
+                    <div class="cube loader-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <main>
         <header class="menu">
             <a href="index.html" class="menu__logo">Web</a>
@@ -119,6 +131,14 @@
 
 
     </main>
+    <script>
+        window.onload = () => {
+            console.log('eeee')
+            setTimeout(() => {
+                document.querySelector('.waite_load').classList.add('waite_load-off')
+            }, 3000)
+        }
+    </script>
     <script src="js/scroll.js "></script>
     <script src="js/switchColor.js "></script>
     <script src="js/wow.min.js "></script>
