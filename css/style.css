@@ -3760,7 +3760,6 @@
 }
 
 main {
-  display: none;
   margin: 0 auto;
   width: 100%;
   max-width: 1600px;
@@ -3951,7 +3950,6 @@ main {
   line-height: 50px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .hello__text > p {
@@ -3961,7 +3959,7 @@ main {
   line-height: 26px;
   margin-bottom: 50px;
   text-align: center;
-  margin-bottom: 30;
+  margin: 30 0;
 }
 
 .hello__text > a {
