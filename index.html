@@ -23,7 +23,7 @@
     </section>
     <main>
         <header class="menu">
-            <a href="index.html" class="menu__logo">Web</a>
+            <a href="index.html" class="menu__logo wow fadeInUp" data>Web</a>
             <nav class="menu__nav">
                 <ul class="menu__ul">
                     <li class="wow fadeInUp anim" data-wow-delay="0"><a class="scroll" href="#main">Main</a></li>
@@ -38,10 +38,10 @@
             <div class="hello__text">
                 <img src="./img/myphoto.jpg" width="150" height="200" alt="" class="hello__foto  wow fadeInDown">
                 <span class="wow fadeInUp" data-wow-delay="0">Hello,</span>
-                <h1 class="wow fadeInUp" data-wow-delay="0.3s">Welcome.</h1>
-                <p class="wow fadeInUp" data-wow-delay="0.6s">I am, <b>Alexander Plotnikov.</b></p>
-                <p class="wow fadeInUp" data-wow-delay="0.9s">I am junoir Back-end and front-end developer.</p>
-                <i class="wow fadeInUp fa fa-cubes" data-wow-delay="1.2s" aria-hidden="true"></i>
+                <h1 class="wow fadeInUp" data-wow-delay="0s">Welcome.</h1>
+                <p class="wow fadeInUp" data-wow-delay="0.3s">I am, <b>Alexander Plotnikov.</b></p>
+                <p class="wow fadeInUp" data-wow-delay="0.3s">I am junoir Back-end and front-end developer.</p>
+                <i class="wow fadeInUp fa fa-cubes" data-wow-delay="0.6s" aria-hidden="true"></i>
             </div>
         </section>
         <section class="aboutMe parent" id="aboutMe">
@@ -139,10 +139,7 @@
             console.log('eeee')
             setTimeout(() => {
                 document.querySelector('.waite_load').classList.add('waite_load-off')
-                    // document.querySelector('main').style.display = "flex"
                 new WOW().init()
-                    /*   new myClass().switchColor('footer')
-                      new myClass().switchAnimation('anim') */
             }, 2000)
         }
     </script>
