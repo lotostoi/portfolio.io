@@ -3,23 +3,9 @@
     margin: 0;
 }
 
+@import "mixins";
 @import "fonts";
 @import "myvar";
-@mixin placeholder {
-    &::-webkit-input-placeholder {
-        @content;
-    }
-    &:-moz-placeholder {
-        @content;
-    }
-    &::-moz-placeholder {
-        @content;
-    }
-    &:-ms-input-placeholder {
-        @content;
-    }
-}
-
 $colOrangeLight: #ff9600;
 $colOrangeMiddle: rgb(131, 87, 6);
 $colOrangeDark: rgb(73, 49, 4);

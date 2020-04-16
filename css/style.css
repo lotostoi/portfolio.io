@@ -3827,6 +3827,10 @@ main {
   margin-left: auto;
 }
 
+.menu__ofOn {
+  display: none;
+}
+
 .menu__ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3837,13 +3841,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.menu__ulanim {
-  -webkit-animation: hello__ul 1s 1 linear 300ms;
-          animation: hello__ul 1s 1 linear 300ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 .menu__ul > li > a {
@@ -3890,6 +3887,158 @@ main {
 .menu__ul > li:nth-child(3),
 .menu__ul > li:nth-child(5) {
   margin-top: -15px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .menu {
+    margin-top: 20px;
+    padding: 10px 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    z-index: 300;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #2f2f2f;
+  }
+  .menu__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    font-family: "Intro regular", "Arial", Sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #493104;
+    -webkit-transform: rotateZ(-20deg);
+            transform: rotateZ(-20deg);
+    border: 1px solid rgba(128, 128, 128, 0.178);
+    -webkit-animation: hello__logo 700ms 2 ease-in-out;
+            animation: hello__logo 700ms 2 ease-in-out;
+    background-color: #fff;
+    height: 70px;
+    width: 70px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 50%;
+  }
+  .menu__logo:hover {
+    color: #ff9600;
+  }
+  .menu__logo:active {
+    color: #835706;
+  }
+  .menu__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    width: 100px;
+    margin-right: 10px;
+    position: relative;
+  }
+  .menu__ofOn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+  }
+  .menu__ofOn > i.fa-bars {
+    display: block;
+    font-size: 30px;
+    color: rgba(255, 255, 0, 0.938);
+  }
+  .menu__ofOn > i.fa-times {
+    display: none;
+    font-size: 30px;
+    color: rgba(255, 255, 0, 0.938);
+  }
+  .menu__ul {
+    position: absolute;
+    width: 90px;
+    background-color: rgba(144, 144, 144, 0.267);
+    border-radius: 5px;
+    top: 50px;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    list-style-type: none;
+    height: auto;
+    border-radius: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+  }
+  .menu__ul > li {
+    -webkit-animation-name: none;
+            animation-name: none;
+  }
+  .menu__ul-active {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  .menu__ul > li > a {
+    height: 20px;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid rgba(144, 144, 144, 0.267);
+    background-color: honeydew;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Myriad Pro regular", "Arial", Sans-serif;
+    color: #493104;
+  }
+  .menu__ul > li > a:hover {
+    background-color: dimgray;
+    color: #ff9600;
+  }
+  .menu__ul > li > a:active {
+    background-color: #272727;
+    color: #835706;
+  }
+  .menu__ul > li:nth-child(2),
+  .menu__ul > li:nth-child(4) {
+    margin-top: 0px;
+  }
+  .menu__ul > li:nth-child(1),
+  .menu__ul > li:nth-child(3),
+  .menu__ul > li:nth-child(5) {
+    margin-top: 0px;
+  }
 }
 
 .hello {

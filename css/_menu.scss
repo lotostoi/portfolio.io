@@ -34,16 +34,15 @@
         display: flex;
         margin-left: auto;
     }
+    &__ofOn {
+        display: none;
+    }
     &__ul {
         display: flex;
         list-style-type: none;
         height: 50px;
         border-radius: 10px;
         align-items: center;
-    }
-    &__ulanim {
-        animation: hello__ul 1s 1 linear 300ms;
-        animation-fill-mode: forwards;
     }
     &__ul>li>a {
         height: 60px;
@@ -80,5 +79,123 @@
     &__ul>li:nth-child(3),
     &__ul>li:nth-child(5) {
         margin-top: -15px;
+    }
+}
+
+@import "mixins";
+@include mq(1024, max) {
+    .menu {
+        margin-top: 20px;
+        padding: 10px 40px;
+        display: flex;
+        width: 100%;
+        max-width: 1600px;
+        align-items: center;
+        position: fixed;
+        z-index: 300;
+        box-sizing: border-box;
+        background-color: rgb(47, 47, 47);
+        &__logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-family: $ir;
+            font-weight: 600;
+            font-size: 25px;
+            color: $colOrangeDark;
+            transform: rotateZ(-20deg);
+            border: 1px solid rgba(128, 128, 128, 0.178);
+            animation: hello__logo 700ms 2 ease-in-out;
+            background-color: #fff;
+            height: 70px;
+            width: 70px;
+            justify-content: center;
+            border-radius: 50%;
+            &:hover {
+                color: $colOrangeLight;
+            }
+            &:active {
+                color: $colOrangeMiddle;
+            }
+        }
+        &__nav {
+            display: flex;
+            margin-left: auto;
+            width: 100px;
+            margin-right: 10px;
+            position: relative;
+        }
+        &__ofOn {
+            display: flex;
+            margin-left: auto;
+            &>i.fa-bars {
+                display: block;
+                font-size: 30px;
+                color: rgba(255, 255, 0, 0.938);
+            }
+            &>i.fa-times {
+                display: none;
+                font-size: 30px;
+                color: rgba(255, 255, 0, 0.938);
+            }
+        }
+        &__ul {
+            position: absolute;
+            width: 90px;
+            background-color: rgba(144, 144, 144, 0.267);
+            border-radius: 5px;
+            top: 50px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            height: auto;
+            border-radius: 10px;
+            align-items: center;
+            transform: scaleY(0);
+            transition: transform 300ms;
+            &>li {
+                animation-name: none;
+            }
+        }
+        &__ul-active {
+            transform: scaleY(1);
+        }
+        &__ul>li>a {
+            height: 20px;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(144, 144, 144, 0.267);
+            background-color: honeydew;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0 10px;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            text-decoration: none;
+            font-size: 15px;
+            font-family: $mpr;
+            color: $colOrangeDark;
+            &:hover {
+                background-color: rgb(105, 105, 105);
+                color: $colOrangeLight;
+            }
+            &:active {
+                background-color: rgb(39, 39, 39);
+                color: $colOrangeMiddle;
+            }
+        }
+        &__ul>li:nth-child(2),
+        &__ul>li:nth-child(4) {
+            margin-top: 0px;
+        }
+        &__ul>li:nth-child(1),
+        &__ul>li:nth-child(3),
+        &__ul>li:nth-child(5) {
+            margin-top: 0px;
+        }
     }
 }
