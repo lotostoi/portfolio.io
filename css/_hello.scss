@@ -1,6 +1,6 @@
 .hello {
     width: 100%;
-    background-color: rgba(65, 25, 9, 0.239);
+    background-color: rgba(41, 40, 40, 0.883);
     fill-opacity: 0.5;
     // height: 0;
     min-height: 900px;
@@ -26,7 +26,7 @@
         margin-bottom: 20px;
     }
     &>span {
-        color: $colOrangeLight;
+        color: rgb(231, 201, 166);
         font-family: $osr;
         font-size: 24px;
         line-height: 26px;
@@ -34,14 +34,16 @@
         margin-bottom: 20px;
     }
     &>h1 {
-        color: black;
+        color: rgb(179, 133, 7);
         font-size: 48px;
         font-family: $ir;
         line-height: 50px;
         text-transform: uppercase;
         text-align: center;
+        margin-bottom: 20px;
     }
     &>p {
+        color: rgb(231, 201, 166);
         font-family: $mpr;
         font-size: 24px;
         line-height: 26px;
@@ -51,30 +53,10 @@
     }
     &>a {
         margin: 0 auto;
-        // margin-top: 5px;
     }
-    &>a>i.fa-sort-up {
+    &>i.fa-cubes {
+        margin: 0 auto;
         font-size: 40px;
-        color: $colOrangeLight;
-        transform: scale(1);
-        transition: transform 500ms;
-        &:hover {
-            color: rgb(131, 87, 6);
-        }
-        &:active {
-            transform: translateY(-200px);
-        }
-    }
-    &>a>i.fa-caret-down {
-        font-size: 40px;
-        color: $colOrangeLight;
-        transform: scale(1);
-        transition: transform 500ms;
-        &:hover {
-            color: rgb(131, 87, 6);
-        }
-        &:active {
-            transform: translateY(200px);
-        }
+        color: rgb(179, 133, 7);
     }
 }
