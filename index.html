@@ -124,20 +124,23 @@
 
 
     </main>
+
+    <script src="js/scroll.js "></script>
+    <script src="js/switchColor.js "></script>
+    <script src="js/wow.min.js "></script>
+    <script>
+    </script>
     <script>
         window.onload = () => {
             console.log('eeee')
             setTimeout(() => {
                 document.querySelector('.waite_load').classList.add('waite_load-off')
                 document.querySelector('main').style.display = "flex"
-            }, 3000)
+                new WOW().init()
+                new myClass().switchColor('footer')
+                new myClass().switchAnimation('anim')
+            }, 2000)
         }
-    </script>
-    <script src="js/scroll.js "></script>
-    <script src="js/switchColor.js "></script>
-    <script src="js/wow.min.js "></script>
-    <script>
-        new WOW().init()
     </script>
 </body>
 

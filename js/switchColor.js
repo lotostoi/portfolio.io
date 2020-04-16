@@ -31,6 +31,7 @@ class myClass {
                 x: e.offsetLeft,
             })
         })
+        console.log(arrObj)
 
         arrObj.forEach((e, i) => {
             if (i === 0) {
