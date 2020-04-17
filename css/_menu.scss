@@ -85,7 +85,7 @@
 @import "mixins";
 @include mq(1024, max) {
     .menu {
-        margin-top: 20px;
+        margin-top: 5px;
         padding: 10px 40px;
         display: flex;
         width: 100%;
@@ -124,17 +124,33 @@
             width: 100px;
             margin-right: 10px;
             position: relative;
+            box-sizing: content-box;
         }
         &__ofOn {
             display: flex;
             margin-left: auto;
+            justify-content: center;
+            align-items: center;
+            position: relative;
             &>i.fa-bars {
+                position: absolute;
                 display: block;
+                visibility: visible;
+                transition: opacity 400ms;
+                opacity: 1;
+                left: 0;
+                top: 0;
                 font-size: 30px;
                 color: rgba(255, 255, 0, 0.938);
             }
             &>i.fa-times {
-                display: none;
+                position: absolute;
+                left: 3px;
+                top: 0;
+                // opacity: 0;
+                visibility: hidden;
+                transition: opacity 400ms;
+                display: block;
                 font-size: 30px;
                 color: rgba(255, 255, 0, 0.938);
             }
@@ -142,10 +158,10 @@
         &__ul {
             position: absolute;
             width: 90px;
-            background-color: rgba(144, 144, 144, 0.267);
+            background-color: rgba(144, 144, 144, 0);
             border-radius: 5px;
             top: 50px;
-            left: 0;
+            left: 44px;
             display: flex;
             flex-direction: column;
             list-style-type: none;
@@ -155,7 +171,9 @@
             transform: scaleY(0);
             transition: transform 300ms;
             &>li {
+                width: 100%;
                 animation-name: none;
+                margin: 10px 0;
             }
         }
         &__ul-active {
@@ -163,7 +181,7 @@
         }
         &__ul>li>a {
             height: 20px;
-            width: auto;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -171,7 +189,7 @@
             background-color: honeydew;
             border-radius: 5px;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 0;
             -webkit-box-shadow: none;
             -moz-box-shadow: none;
             box-shadow: none;
@@ -180,8 +198,8 @@
             font-family: $mpr;
             color: $colOrangeDark;
             &:hover {
-                background-color: rgb(105, 105, 105);
-                color: $colOrangeLight;
+                background-color: honeydew;
+                color: $colOrangeDark;
             }
             &:active {
                 background-color: rgb(39, 39, 39);

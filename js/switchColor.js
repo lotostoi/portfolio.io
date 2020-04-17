@@ -2,6 +2,7 @@ class myClass {
     constructor(chengEll) {
         this.parentClass = ".parent";
         this.allArr = [];
+        this.breakPoint = 1024;
     }
     switchColor(chengEll) {
         let chengEllClass = "." + chengEll
@@ -20,6 +21,7 @@ class myClass {
     }
 
     switchAnimation(classElems) {
+
         let arr = document.querySelectorAll(`.${classElems}`)
         let arrObj = []
         arr.forEach(e => {
@@ -31,7 +33,6 @@ class myClass {
                 x: e.offsetLeft,
             })
         })
-        console.log(arrObj)
 
         arrObj.forEach((e, i) => {
             if (i === 0) {
@@ -47,7 +48,7 @@ class myClass {
         })
 
         window.addEventListener('scroll', () => {
-            if (main.clientHeight - 5 < window.pageYOffset) {
+            if (main.clientHeight - 5 < window.pageYOffset && main.clientWidth > this.breakPoint) {
                 arrObj.forEach(e => {
                     e.el.style = e.anim
                 })
@@ -59,6 +60,8 @@ class myClass {
             }
 
         })
+
+
     }
     _getArrEll() {
         let arr = document.querySelectorAll(this.parentClass)

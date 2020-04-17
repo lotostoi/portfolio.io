@@ -3891,7 +3891,7 @@ main {
 
 @media only screen and (max-width: 1023px) {
   .menu {
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 10px 40px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3946,30 +3946,52 @@ main {
     width: 100px;
     margin-right: 10px;
     position: relative;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
   }
   .menu__ofOn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-left: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
   }
   .menu__ofOn > i.fa-bars {
+    position: absolute;
     display: block;
+    visibility: visible;
+    -webkit-transition: opacity 400ms;
+    transition: opacity 400ms;
+    opacity: 1;
+    left: 0;
+    top: 0;
     font-size: 30px;
     color: rgba(255, 255, 0, 0.938);
   }
   .menu__ofOn > i.fa-times {
-    display: none;
+    position: absolute;
+    left: 3px;
+    top: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 400ms;
+    transition: opacity 400ms;
+    display: block;
     font-size: 30px;
     color: rgba(255, 255, 0, 0.938);
   }
   .menu__ul {
     position: absolute;
     width: 90px;
-    background-color: rgba(144, 144, 144, 0.267);
+    background-color: rgba(144, 144, 144, 0);
     border-radius: 5px;
     top: 50px;
-    left: 0;
+    left: 44px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3991,8 +4013,10 @@ main {
     transition: transform 300ms, -webkit-transform 300ms;
   }
   .menu__ul > li {
+    width: 100%;
     -webkit-animation-name: none;
             animation-name: none;
+    margin: 10px 0;
   }
   .menu__ul-active {
     -webkit-transform: scaleY(1);
@@ -4000,7 +4024,7 @@ main {
   }
   .menu__ul > li > a {
     height: 20px;
-    width: auto;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4014,7 +4038,7 @@ main {
     background-color: honeydew;
     border-radius: 5px;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 0;
     -webkit-box-shadow: none;
     box-shadow: none;
     text-decoration: none;
@@ -4023,8 +4047,8 @@ main {
     color: #493104;
   }
   .menu__ul > li > a:hover {
-    background-color: dimgray;
-    color: #ff9600;
+    background-color: honeydew;
+    color: #493104;
   }
   .menu__ul > li > a:active {
     background-color: #272727;
@@ -4119,6 +4143,66 @@ main {
   margin: 0 auto;
   font-size: 40px;
   color: #b38507;
+}
+
+@media only screen and (max-width: 1023px) {
+  .hello {
+    min-height: 700px;
+    padding: 20px;
+  }
+  .hello__text {
+    width: 280px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hello__text > img {
+    margin: 0 auto;
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .hello__text > span {
+    color: #e7c9a6;
+    font-family: "Open sans regular", "Arial", Sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .hello__text > h1 {
+    color: #b38507;
+    font-size: 30px;
+    font-family: "Intro regular", "Arial", Sans-serif;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .hello__text > p {
+    color: #e7c9a6;
+    font-family: "Myriad Pro regular", "Arial", Sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 50px;
+    text-align: center;
+    margin: 20 0;
+  }
+  .hello__text > a {
+    margin: 0 auto;
+  }
+  .hello__text > i.fa-cubes {
+    margin: 0 auto;
+    font-size: 20px;
+    color: #b38507;
+  }
 }
 
 .aboutMe {
