@@ -94,7 +94,7 @@
         position: fixed;
         z-index: 300;
         box-sizing: border-box;
-        background-color: rgb(47, 47, 47);
+        background-color: rgba(47, 47, 47, 0);
         &__logo {
             display: flex;
             align-items: center;
