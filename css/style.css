@@ -4378,6 +4378,59 @@ main {
   text-align: center;
 }
 
+@media only screen and (max-width: 1023px) {
+  .name {
+    width: 100%;
+    height: 90px;
+  }
+  .name::before {
+    content: "";
+    width: 100%;
+    height: 50px;
+  }
+  .name > div {
+    width: 100%;
+    height: 85px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .name > div > .desc {
+    font-size: 20px;
+    margin-right: 40px;
+  }
+  .name > div > .myname {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .name {
+    width: 100%;
+    height: auto;
+    min-height: 70px;
+  }
+  .name::before {
+    content: "";
+    width: 100%;
+    height: 50px;
+    height: 23px;
+    bottom: -23px;
+  }
+  .name > div {
+    width: 100%;
+    height: 98%;
+  }
+  .name > div > .desc {
+    font-size: 20px;
+    margin-right: 0px;
+    text-align: center;
+  }
+  .name > div > .myname {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
 .myskils {
   display: -webkit-box;
   display: -ms-flexbox;
