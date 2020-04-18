@@ -82,15 +82,11 @@
     }
 }
 
-@import "mixins";
+//@import "mixins";
 @include mq(1024, max) {
     .menu {
         margin-top: 5px;
         padding: 10px 40px;
-        display: flex;
-        width: 100%;
-        max-width: 1600px;
-        align-items: center;
         position: absolute;
         z-index: 300;
         box-sizing: border-box;
@@ -223,6 +219,26 @@
         &__ul>li:nth-child(3),
         &__ul>li:nth-child(5) {
             margin-top: 0px;
+        }
+    }
+}
+
+@include mq(640, max) {
+    .menu {
+        &__logo {
+            font-size: 20px;
+            height: 40px;
+            width: 40px;
+        }
+        &__nav {
+            display: flex;
+            margin-left: auto;
+            width: 100px;
+            margin-right: 10px;
+            position: fixed;
+            box-sizing: content-box;
+            right: -50px;
+            top: 16px;
         }
     }
 }

@@ -2,7 +2,7 @@ class myClass {
     constructor(chengEll) {
         this.parentClass = ".parent";
         this.allArr = [];
-        this.breakPoint = 1024;
+        this.breakPoint = 1020;
     }
     switchColor(chengEll) {
         let chengEllClass = "." + chengEll
