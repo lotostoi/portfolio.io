@@ -3901,11 +3901,11 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: fixed;
+    position: absolute;
     z-index: 300;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background-color: rgba(47, 47, 47, 0);
+    background-color: #2f2f2f;
   }
   .menu__logo {
     display: -webkit-box;
@@ -3945,14 +3945,18 @@ main {
     margin-left: auto;
     width: 100px;
     margin-right: 10px;
-    position: relative;
+    position: fixed;
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
+    right: -50px;
+    top: 32px;
   }
   .menu__ofOn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 40px;
+    height: 40px;
     margin-left: auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -3960,7 +3964,10 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: relative;
+    position: absolute;
+    border: 1px solid rgba(128, 128, 128, 0.568);
+    border-radius: 10px;
+    background-color: #1f1f1f;
   }
   .menu__ofOn > i.fa-bars {
     position: absolute;
@@ -3969,21 +3976,23 @@ main {
     -webkit-transition: opacity 400ms;
     transition: opacity 400ms;
     opacity: 1;
-    left: 0;
-    top: 0;
+    left: 7px;
+    top: 5px;
     font-size: 30px;
     color: rgba(255, 255, 0, 0.938);
+    z-index: 350;
   }
   .menu__ofOn > i.fa-times {
     position: absolute;
-    left: 3px;
-    top: 0;
+    left: 10px;
+    top: 5px;
     visibility: hidden;
     -webkit-transition: opacity 400ms;
     transition: opacity 400ms;
     display: block;
     font-size: 30px;
     color: rgba(255, 255, 0, 0.938);
+    z-index: 350;
   }
   .menu__ul {
     position: absolute;
@@ -3991,7 +4000,7 @@ main {
     background-color: rgba(144, 144, 144, 0);
     border-radius: 5px;
     top: 50px;
-    left: 44px;
+    left: -50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4908,5 +4917,59 @@ main {
   -webkit-transition: background-color 2s;
   transition: background-color 2s;
   background-color: #333333;
+}
+
+@media only screen and (max-width: 1023px) {
+  .footer {
+    padding: 10px 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    z-index: 300;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    background-color: #1d1d1d;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.411);
+    top: 0;
+    z-index: 300;
+  }
+  .footer > a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 50px;
+    width: 32px;
+    height: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer > a > i {
+    font-size: 30px;
+  }
+  .footer > a > :hover {
+    color: #f897a7;
+  }
+  .footer > a:hover {
+    color: pink;
+  }
 }
 /*# sourceMappingURL=style.css.map */
